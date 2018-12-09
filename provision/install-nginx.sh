@@ -11,7 +11,12 @@ mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 
 # Load up the confs for our development area
 mkdir -p /etc/nginx/sites-enabled/
-cp ../conf/nginx.conf /etc/nginx/nginx.conf
-cp ../conf/local.development.conf /etc/nginx/sites-available/local.development.conf
+mkdir -p /etc/nginx/sites-available/
 
+cp /vagrant/provision/conf/nginx.conf /etc/nginx/nginx.conf
+cp /vagrant/provision/conf/local.development.conf /etc/nginx/sites-available/local.development.conf
+
+ln -s /etc/nginx/sites-available/local.development.conf /etc/nginx/sites-enabled/local.development.conf
+
+# Start the nginx service
 service nginx restart
