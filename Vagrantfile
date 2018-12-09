@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "development", "/home/vagrant/development"
 
   # Name the VM something interesting
-  config.vm.define :sdk do |t|
+  config.vm.define :shield_sdk do |t|
   end
 
   # Run the provisioning script
