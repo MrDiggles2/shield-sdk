@@ -1,6 +1,8 @@
 ## Getting started
 
-Prerequisites: VirtualBox and Vagrant are installed
+Prerequisites:
+* VirtualBox and Vagrant are installed
+* git clone https://github.com/MrDiggles2/shield-sdk.git
 
 From the root of this repository, run `vagrant up`. In windows, run this command through Powershell.
 
