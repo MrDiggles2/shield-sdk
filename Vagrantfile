@@ -24,6 +24,10 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder "development", "/home/vagrant/development"
 
+  # Name the VM something interesting
+  config.vm.define :sdk do |t|
+  end
+
   # Run the provisioning script
   config.vm.provision :shell, :path => "provision/provision.sh"
 
